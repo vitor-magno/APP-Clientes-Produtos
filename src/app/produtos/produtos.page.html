@@ -1,0 +1,46 @@
+<ion-toolbar text-center color="primary">
+  <ion-title class="ion-text-center">
+
+    Adicionar Produto
+
+  </ion-title>
+  <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+</ion-toolbar>
+<ion-content>
+  <html>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Digite o Código do Produto:</ion-label>
+      <ion-input type="number" placeholder="Digite o nome do código do produto..." (ionChange)="f_CodigoProduto($event)" [(ngModel)]="CodigoProduto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Digite o Nome do Produto:</ion-label>
+      <ion-input placeholder="Digite o nome do nome do produto..." (ionChange)="f_NomeProduto($event)" [(ngModel)]="NomeProduto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fabricação Produto:</ion-label>
+      <ion-input placeholder="Digite Nacional ou Importado..." (ionChange)="f_Fabricacao($event)" [(ngModel)]="Fabricacao"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Tamanho Produto:</ion-label>
+      <ion-input placeholder="Digite o Tamanho do Produto..." (ionChange)="f_Tamanho($event)" [(ngModel)]="Tamanho"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Valor Produto:</ion-label>
+      <ion-input type="number" placeholder="Digite o Valor do Produto..." (ionChange)="f_ValorProduto($event)" [(ngModel)]="Valor"></ion-input>
+    </ion-item>
+
+
+    <ion-button color="success" class="text-center" style="display: flex;" (click)="createProduct()">
+      Adicionar
+    </ion-button>
+  </ion-card>
+
+  </html>
+</ion-content>

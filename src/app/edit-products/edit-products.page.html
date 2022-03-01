@@ -1,0 +1,41 @@
+<ion-toolbar text-center color="primary">
+  <ion-title class="ion-text-center">
+    Editar Produto
+  </ion-title>
+  <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+</ion-toolbar>
+
+<ion-content>
+  <html>
+    <ion-card  >
+      <ion-item>
+        <ion-label position="floating">Codigo Produto: </ion-label>
+        <ion-input  type="number"  (ionChange)="f_CodigoProduto($event)" [(ngModel)]="CodigoProduto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nome Produto: </ion-label>
+        <ion-input (ionChange)="f_NomeProduto($event)" [(ngModel)]="NomeProduto"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Fabricação: </ion-label>
+        <ion-input (ionChange)="f_Fabricacao($event)" [(ngModel)]="Fabricacao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tamanho: </ion-label>
+        <ion-input (ionChange)="f_Tamanho($event)" [(ngModel)]="Tamanho"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Valor: </ion-label>
+        <ion-input type="number" (ionChange)="f_Valor($event)" [(ngModel)]="Valorr"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="updateProduct()" style="display: flex;" color="success" class="text-center">
+        Editar
+      </ion-button>
+    </ion-card>
+  </html>
+</ion-content>

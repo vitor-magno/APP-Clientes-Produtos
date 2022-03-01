@@ -1,0 +1,42 @@
+<ion-toolbar text-center color="primary">
+  <ion-title class="ion-text-center">
+    Editar Clientes
+  </ion-title>
+  <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+</ion-toolbar>
+
+<ion-content>
+  <html>
+  
+    <ion-card  >
+      <ion-item>
+        <ion-label position="floating">Codigo Cliente: </ion-label>
+        <ion-input (ionChange)="f_CodigoCliente($event)" [(ngModel)]="CodigoClientes"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nome Cliente: </ion-label>
+        <ion-input (ionChange)="f_NomePergunta($event)" [(ngModel)]="NomeCliente"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">CPF: </ion-label>
+        <ion-input (ionChange)="f_CPF($event)" [(ngModel)]="CPF"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Sexo: </ion-label>
+        <ion-input (ionChange)="f_Sexo($event)" [(ngModel)]="Sexo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email: </ion-label>
+        <ion-input (ionChange)="f_Email($event)" [(ngModel)]="Email"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="updateClient()" style="display: flex;" color="success" class="text-center">
+        Editar
+      </ion-button>
+    </ion-card>
+  </html>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-toolbar text-center color="primary">
+  <ion-title class="ion-text-center">
+
+    Adicionar Cliente
+
+  </ion-title>
+  <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+</ion-toolbar>
+<ion-content>
+  <html>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Digite o Código do Cliente:</ion-label>
+      <ion-input type="number" placeholder="Digite o nome do código do cliente..." (ionChange)="f_CodigoCliente($event)" [(ngModel)]="CodigoCliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Digite o Nome do Cliente:</ion-label>
+      <ion-input placeholder="Digite o nome do nome do cliente..." (ionChange)="f_NomeCliente($event)" [(ngModel)]="NomeCliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Sexo:</ion-label>
+      <ion-input placeholder="Digite o Sexo do Cliente..." (ionChange)="f_Sexo($event)" [(ngModel)]="Sexo"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">CPF:</ion-label>
+      <ion-input placeholder="Digite o CPF do Cliente..." (ionChange)="f_CPF($event)" [(ngModel)]="CPF"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input placeholder="Digite o Email do cliente..." (ionChange)="f_Email($event)" [(ngModel)]="Email"></ion-input>
+    </ion-item>
+
+
+    <ion-button color="success" class="text-center" style="display: flex;" (click)="createClient()">
+      Adicionar
+    </ion-button>
+  </ion-card>
+
+  </html>
+</ion-content>

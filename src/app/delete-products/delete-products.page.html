@@ -1,0 +1,37 @@
+<ion-toolbar text-center color="primary">
+  <ion-title class="ion-text-center">
+    Excluir Produto
+  </ion-title>
+  <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+</ion-toolbar>
+
+<ion-content>
+  <html>
+
+    <ion-card >
+      <ion-item>
+        <ion-label >Codigo Cliente: </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label >Nome Cliente: </ion-label> 
+      </ion-item>
+
+      <ion-item>
+        <ion-label >CPF:   </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label >Sexo: </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label  >Email: </ion-label>
+      </ion-item>
+
+      <ion-button (click)="deleteProdut()" style="display: flex;" color="success" class="text-center">
+        Confirmar Exclusão
+      </ion-button>
+    </ion-card>
+  </html>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="construct-outline" slot="start"></ion-icon>
+      <ion-label>CRUD Produtos/Clientes</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      Sistemas utilizado para realizar um CRUD de Clientes e Produtos
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-item (click)="navigationProducts()" routerLinkActive="active"
+      class="ion-activated">
+      <ion-icon name="add" slot="start"></ion-icon>
+      <ion-label>Cadastrar Produtos</ion-label>
+    </ion-item>
+
+    <ion-item (click)="navigationClients()" routerLinkActive="active">
+      <ion-icon name="add" slot="start"></ion-icon>
+      <ion-label>Cadastrar Clientes</ion-label>
+    </ion-item>
+
+    <ion-item (click)="readClients()" routerLinkActive="active">
+      <ion-icon name="create" slot="start"></ion-icon>
+      <ion-label>Listar Clientes</ion-label>
+    </ion-item>
+
+    <ion-item (click)="readProducts()" routerLinkActive="active">
+      <ion-icon name="create" slot="start"></ion-icon>
+      <ion-label>Listar Produtos</ion-label>
+    </ion-item>
+
+  </ion-card>
+</ion-content>
